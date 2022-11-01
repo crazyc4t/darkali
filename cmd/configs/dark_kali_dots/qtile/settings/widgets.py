@@ -12,7 +12,6 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        wallpaper="/usr/share/backgrounds/kali/kali-ascii-16x9.png",
         top=bar.Bar(
             [
                 widget.Sep(

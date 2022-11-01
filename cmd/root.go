@@ -14,12 +14,7 @@ var rootCmd = &cobra.Command{
 	Use:   "darkali",
 	Short: "Tool that will let you handle your DarKali installation.",
 	Long: `dark-cli will let you install, clean, and update your installation very easily.
-								Made by crazyc4t
-							  https://crazyc4t.xyz
-	`,
-	// Uncomment the following line if your bare application
-	// has an action associated with it:
-	// Run: func(cmd *cobra.Command, args []string) { },
+	Made by crazyc4t: https://crazyc4t.xyz`,
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.

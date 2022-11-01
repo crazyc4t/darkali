@@ -43,8 +43,8 @@ echo $' _(_/((_))  ((_) _| | )(_))'
 echo $'|   \)) -_)|  _/ _` || || |'
 echo $'|_||_|\___||_| \__,_| \_, |' 
 echo $'                      |__/'  
-echo -e '\nMade By DarthNeder'
-echo 'https://saidneder.tech/'
+echo -e '\nMade By Crazyc4t'
+echo 'https://crazyc4t.xyz/'
 sleep 0.5
 }                               
 
