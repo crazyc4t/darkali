@@ -41,6 +41,7 @@ func install() {
 		installNon := exec.Command("./cmd/configs/nonroot.sh")
 		runner.Run(installSys)
 		runner.Run(installNon)
+		cute.Println("Rebooting is necessary for applying changes, DarKali installed.")
 	}
 }
 
