@@ -38,7 +38,7 @@ func install() {
 		log.Fatal("Try again without sudo privilages, exiting...")
 	} else {
 		install := exec.Command("sudo", "./cmd/configs/system.sh")
-		pip := exec.Command("pip", "install", "cairocffi xcffib")
+		pip := exec.Command("pip", "install", "cairocffi xcffib psutil")
 		runner.Run(install)
 		runner.Run(pip)
 	}
