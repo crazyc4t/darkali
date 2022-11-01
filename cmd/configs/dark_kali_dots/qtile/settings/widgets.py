@@ -45,7 +45,8 @@ screens = [
                     foreground=theme[12],
                     background=theme[0],
                 ),
-                widget.WindowName(fontsize=14, foreground=theme[13], padding=0),
+                widget.WindowName(
+                    fontsize=14, foreground=theme[13], padding=0),
                 widget.Systray(background=theme[0], padding=5),
                 widget.KeyboardLayout(
                     configured_keyboards=["us", "es olpc"],
@@ -58,7 +59,8 @@ screens = [
                     foreground=theme[10],
                     background=theme[0],
                     padding=5,
-                    mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("pavucontrol")},
+                    mouse_callbacks={
+                        "Button1": lambda: qtile.cmd_spawn("pavucontrol")},
                     fmt=" 墳 {} ",
                 ),
                 widget.TextBox(
@@ -67,7 +69,7 @@ screens = [
                     fmt=" {} ",
                 ),
                 widget.Net(
-                    interface="enp1s0",
+                    interface="eth0",
                     format="  {down} ",
                     background=theme[0],
                     foreground=theme[12],
@@ -91,7 +93,8 @@ screens = [
                     background=theme[0],
                     foreground=theme[14],
                 ),
-                widget.CurrentLayoutIcon(background=theme[0], foreground=theme[15]),
+                widget.CurrentLayoutIcon(
+                    background=theme[0], foreground=theme[15]),
             ],
             24,
             opacity=1,
