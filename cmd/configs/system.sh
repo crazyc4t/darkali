@@ -5,7 +5,7 @@ apt install kali-desktop-core git neovim python3 python3-pip libpangocairo-1.0-0
 sleep 2
 pip install qtile
 sleep 2
-cp qtile.desktop /usr/share/xsessions
+cp ./cmd/configs/qtile.desktop /usr/share/xsessions
 sleep 2
 systemctl enable lightdm
 sleep 2

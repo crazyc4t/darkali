@@ -15,7 +15,7 @@ func Run(cmd *exec.Cmd) {
 	if err != nil {
 		cute.Check("Error: ", err)
 	}
-	time.Sleep(8 * time.Second)
+	time.Sleep(10 * time.Second)
 	cute.Println("Wating the script to complete...")
 	err = cmd.Wait()
 	if err != nil {
