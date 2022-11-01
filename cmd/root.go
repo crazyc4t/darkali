@@ -11,7 +11,7 @@ import (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "dark-cli",
+	Use:   "darkali",
 	Short: "Tool that will let you handle your DarKali installation.",
 	Long: `
 	dark-cli will let you install, clean, and update your installation very easily.

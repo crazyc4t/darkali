@@ -1,12 +1,12 @@
 package cmd
 
 import (
-	"log"
 	"os/exec"
 	"strconv"
 
 	"github.com/crazyc4t/darkali/runner"
 	"github.com/spf13/cobra"
+	"github.com/zakaria-chahboun/cute"
 )
 
 // installCmd represents the install command
@@ -28,19 +28,19 @@ func install() {
 	perm := exec.Command("id", "-u")
 	permOut, err := perm.Output()
 	if err != nil {
-		log.Fatal(err)
+		cute.Check("Error:", err)
 	}
 	i, err := strconv.Atoi(string(permOut[:len(permOut)-1]))
 	if err != nil {
-		log.Fatal(err)
+		cute.Check("Error:", err)
 	}
 	if i == 0 {
-		log.Fatal("Try again without sudo privilages, exiting...")
+		cute.Println("Try again without sudo privilages, exiting...")
 	} else {
-		install := exec.Command("sudo", "./cmd/configs/system.sh")
-		pip := exec.Command("pip", "install", "cairocffi xcffib psutil")
-		runner.Run(install)
-		runner.Run(pip)
+		installSys := exec.Command("sudo", "./cmd/configs/system.sh")
+		installNon := exec.Command("./cmd/configs/nonroot.sh")
+		runner.Run(installSys)
+		runner.Run(installNon)
 	}
 }
 
