@@ -17,7 +17,7 @@ var installCmd = &cobra.Command{
 	- Qtile window manager
 	- Kitty terminal
 	- Neovim config
-	- Firefox-esr
+	- Librewolf
 	`,
 	Run: func(cmd *cobra.Command, args []string) {
 		install()

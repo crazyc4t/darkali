@@ -2,7 +2,7 @@ from .themes import *
 
 # Variables
 mod = "mod4"
-terminal = "alacritty"
+terminal = "kitty"
 browser = "librewolf"
 font = "hack nerd font"
 
