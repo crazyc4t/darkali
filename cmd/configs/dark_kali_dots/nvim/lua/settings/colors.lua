@@ -47,6 +47,8 @@ require("tokyonight").setup({
   on_highlights = function(highlights, colors) end,
 })
 
+vim.cmd[[colorscheme tokyonight]]
+
 require("transparent").setup({
   enable = true, -- boolean: enable transparent
   extra_groups = { -- table/string: additional groups that should be cleared
