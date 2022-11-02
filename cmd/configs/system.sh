@@ -16,6 +16,6 @@ Components: main
 Architectures: amd64
 Signed-By: /usr/share/keyrings/librewolf.gpg
 EOF
-apt update
+apt update -yy
 apt install librewolf -y
-apt remove qterminal
+apt remove qterminal -yy
