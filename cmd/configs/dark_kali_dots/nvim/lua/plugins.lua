@@ -59,7 +59,7 @@ return require("packer").startup(function()
   use("norcalli/nvim-colorizer.lua")
 
   -- Colorscheme
-  use({ "catppuccin/nvim", as = "catppuccin" })
+  use "folke/tokyonight.nvim"
 
   -- Emmet
   use("mattn/emmet-vim")
@@ -84,17 +84,7 @@ return require("packer").startup(function()
 
   -- Formatter
   use("jose-elias-alvarez/null-ls.nvim")
-
-  -- Discord presence
-  use("andweeb/presence.nvim")
-
-  -- Code navigation
-  use({
-    "stevearc/aerial.nvim",
-    config = function()
-      require("aerial").setup()
-    end,
-  })
+  
   -- Hover
   use({
     "lewis6991/hover.nvim",

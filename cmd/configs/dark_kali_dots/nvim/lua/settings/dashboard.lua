@@ -3,18 +3,15 @@ local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
 
 -- Set header
-dashboard.section.header.val = {
-  "  ▄████▄   ██▀███   ▄▄▄      ▒███████▒▓██   ██▓ ▄████▄   ▄▄▄     ▄▄▄█████▓",
-  " ▒██▀ ▀█  ▓██ ▒ ██▒▒████▄    ▒ ▒ ▒ ▄▀░ ▒██  ██▒▒██▀ ▀█  ▒████▄   ▓  ██▒ ▓▒",
-  " ▒▓█    ▄ ▓██ ░▄█ ▒▒██  ▀█▄  ░ ▒ ▄▀▒░   ▒██ ██░▒▓█    ▄ ▒██  ▀█▄ ▒ ▓██░ ▒░",
-  " ▒▓▓▄ ▄██▒▒██▀▀█▄  ░██▄▄▄▄██   ▄▀▒   ░  ░ ▐██▓░▒▓▓▄ ▄██▒░██▄▄▄▄██░ ▓██▓ ░ ",
-  " ▒ ▓███▀ ░░██▓ ▒██▒ ▓█   ▓██▒▒███████▒  ░ ██▒▓░▒ ▓███▀ ░ ▓█   ▓██▒ ▒██▒ ░ ",
-  " ░ ░▒ ▒  ░░ ▒▓ ░▒▓░ ▒▒   ▓▒█░░▒▒ ▓░▒░▒   ██▒▒▒ ░ ░▒ ▒  ░ ▒▒   ▓▒█░ ▒ ░░   ",
-  "   ░  ▒     ░▒ ░ ▒░  ▒   ▒▒ ░░░▒ ▒ ░ ▒ ▓██ ░▒░   ░  ▒     ▒   ▒▒ ░   ░    ",
-  " ░          ░░   ░   ░   ▒   ░ ░ ░ ░ ░ ▒ ▒ ░░  ░          ░   ▒    ░      ",
-  " ░ ░         ░           ░  ░  ░ ░     ░ ░     ░ ░            ░  ░        ",
-  " ░                           ░         ░ ░     ░                          ",
-}
+dashboard.section.header.val = {[[
+	▄▀▀█▄▄   ▄▀▀█▄   ▄▀▀▄▀▀▀▄  ▄▀▀▄ █  ▄▀▀█▄   ▄▀▀▀▀▄     ▄▀▀█▀▄   
+		█ ▄▀   █ ▐ ▄▀ ▀▄ █   █   █ █  █ ▄▀ ▐ ▄▀ ▀▄ █    █     █   █  █  
+		▐ █    █   █▄▄▄█ ▐  █▀▀█▀  ▐  █▀▄    █▄▄▄█ ▐    █     ▐   █  ▐  
+		  █    █  ▄▀   █  ▄▀    █    █   █  ▄▀   █     █          █     
+		 ▄▀▄▄▄▄▀ █   ▄▀  █     █   ▄▀   █  █   ▄▀    ▄▀▄▄▄▄▄▄▀ ▄▀▀▀▀▀▄  
+		█     ▐  ▐   ▐   ▐     ▐   █    ▐  ▐   ▐     █        █       █ 
+		▐                          ▐                 ▐        ▐       ▐ 
+]]}
 
 -- Set menu
 dashboard.section.buttons.val = {
@@ -25,7 +22,7 @@ dashboard.section.buttons.val = {
   dashboard.button("q", "  > Quit NVIM", ":qa<CR>"),
 }
 
-dashboard.section.footer.val = "On my way to success"
+dashboard.section.footer.val = "The quieter your become, the more you are able to hear."
 -- Send config to alpha
 alpha.setup(dashboard.opts)
 
