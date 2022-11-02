@@ -21,7 +21,7 @@ var setIpCmd = &cobra.Command{
 		// qtile cmd-obj -o widget textbox -f update -a "New text"
 		err := setIp.Run()
 		if err != nil {
-			cute.Check("Error happened:", err)
+			cute.Check("Error:", err)
 		}
 		cute.Println("Done")
 	},
