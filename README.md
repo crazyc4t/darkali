@@ -12,9 +12,25 @@ I was using the default xfce desktop that kali comes with (it's awesome!) but I 
 
 ![usability](usability.png)
 
+## Getting started
+
+Clone this repository:
+
+```bash
+git clone https://github.com/crazyc4t/darkali.git
+```
+
+Then move into the "darkali" directory and you are good to go!
+
+```bash
+./darkali --help
+```
+
 ## The Darkali CLI
 
 I made a command-line interface program for ease of housekeeping, being updating and cleaning the system, as well as installing it of course, written in [Go](https://go.dev/) with the [Cobra](https://pkg.go.dev/github.com/spf13/cobra) package and the [Cute](https://pkg.go.dev/github.com/zakaria-chahboun/cute) for printing, with the help of some bash scripts.
+
+If you want to have the tool system-wide, you can install it with `go install` inside the "darkali" directory! (Go needs to be installed)
 
 Usage:
 
@@ -83,5 +99,4 @@ Basic keybindings:
 ![cool](coolsetup.png)
 
 Made by crazyc4t with <3
-
-[webpage](https://crazyc4t.xyz)
+[My website!](https://crazyc4t.xyz)
