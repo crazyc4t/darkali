@@ -2,9 +2,11 @@ package cmd
 
 import (
 	"os/exec"
-	"strconv"
 
+	"github.com/crazyc4t/darkali/header"
+	"github.com/crazyc4t/darkali/privilages"
 	"github.com/crazyc4t/darkali/runner"
+	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 	"github.com/zakaria-chahboun/cute"
 )
@@ -20,29 +22,25 @@ var cleanCmd = &cobra.Command{
 }
 
 func clean() {
-	perm := exec.Command("id", "-u")
-	permOut, err := perm.Output()
-	if err != nil {
-		cute.Check("Error: ", err)
-	}
-	i, err := strconv.Atoi(string(permOut[:len(permOut)-1]))
-	if err != nil {
-		cute.Check("Error: ", err)
-	}
-	if i == 0 {
-		autoClean := exec.Command("apt", "autoclean")
-		autoRemove := exec.Command("apt", "autoremove")
-		aptClean := exec.Command("apt", "clean")
+	color.Blue(header.Header)
+	if privilages.Privilaged() {
+		autoClean := exec.Command("apt", "autoclean", "-yy")
+		autoRemove := exec.Command("apt", "autoremove", "-yy")
+		aptClean := exec.Command("apt", "clean", "-yy")
+		cute.Println("Updating...")
 		runner.Run(autoClean)
 		runner.Run(autoRemove)
 		runner.Run(aptClean)
+		cute.Println("Done!")
 	} else {
-		autoClean := exec.Command("sudo", "apt", "autoclean")
-		autoRemove := exec.Command("sudo", "apt", "autoremove")
-		aptClean := exec.Command("sudo", "apt", "clean")
+		autoClean := exec.Command("sudo", "apt", "autoclean", "-yy")
+		autoRemove := exec.Command("sudo", "apt", "autoremove", "-yy")
+		aptClean := exec.Command("sudo", "apt", "clean", "-yy")
+		cute.Println("Updating...")
 		runner.Run(autoClean)
 		runner.Run(autoRemove)
 		runner.Run(aptClean)
+		cute.Println("Done!")
 	}
 }
 

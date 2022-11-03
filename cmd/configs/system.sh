@@ -1,6 +1,6 @@
 #!/bin/bash
 apt update -yy && apt upgrade -yy
-apt install kali-desktop-core git neovim python3 python3-pip libpangocairo-1.0-0 alsa-utils pavucontrol thunar suckless-tools lightdm kitty nitrogen picom golang-go neofetch rofi xorg xserver-xorg xinit python3-pip python3-xcffib python3-cairocffi keepassxc feh -yy
+apt install kali-desktop-core git neovim python3 python3-pip libpangocairo-1.0-0 alsa-utils pavucontrol thunar suckless-tools lightdm kitty nitrogen picom golang-go neofetch rofi xorg xserver-xorg xinit python3-pip python3-xcffib python3-cairocffi keepassxc feh vlc ristretto xfce4-screenshooter -yy
 pip install qtile
 cp ./cmd/configs/qtile.desktop /usr/share/xsessions
 mv /etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-config-original.conf

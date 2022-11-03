@@ -14,16 +14,22 @@ import (
 var setIpCmd = &cobra.Command{
 	Use:   "setIp",
 	Short: "Sets your target IP in the qtile bar",
-	Long:  `This is useful to remember your target IP when pentesting for example a HackTheBox machine.`,
+	Long: `
+	This is useful to remember your target IP when pentesting for example a HackTheBox machine.
+	Example: darkali setIp 10.10.10.10
+	`,
 	Run: func(cmd *cobra.Command, args []string) {
-		ip := `"` + args[0] + `"`
-		setIp := exec.Command("qtile", "cmd-obj", "widget", "textbox", "-f", "update", "-a", ip)
-		// qtile cmd-obj -o widget textbox -f update -a "New text"
-		err := setIp.Run()
-		if err != nil {
-			cute.Check("Error:", err)
+		if len(args) == 1 {
+			ip := args[0]
+			setIp := exec.Command("./cmd/configs/setIp.sh", ip)
+			err := setIp.Start()
+			if err != nil {
+				cute.Check("Error:", err)
+			}
+			cute.Println("Done")
+		} else {
+			cute.Println("Too many arguments, try again.")
 		}
-		cute.Println("Done")
 	},
 }
 
