@@ -20,6 +20,8 @@ var installCmd = &cobra.Command{
 	- Kitty terminal
 	- Neovim config
 	- Librewolf
+
+	You need to run it inside the darkali directory.
 	`,
 	Run: func(cmd *cobra.Command, args []string) {
 		install()

@@ -21,7 +21,7 @@ var setIpCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) == 1 {
 			ip := args[0]
-			setIp := exec.Command("./cmd/configs/setIp.sh", ip)
+			setIp := exec.Command("qtile", "cmd-obj", "-o", "widget", "textbox", "-f", "update", "-a", ip)
 			err := setIp.Start()
 			if err != nil {
 				cute.Check("Error:", err)

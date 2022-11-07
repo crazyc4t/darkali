@@ -32,6 +32,8 @@ I made a command-line interface program for ease of housekeeping, being updating
 
 If you want to have the tool system-wide, you can install it with `go install` inside the "darkali" directory! (Go needs to be installed)
 
+**Note: The `darkali install` command only works inside the darkali directory**
+
 Usage:
 
 ```bash
@@ -71,6 +73,8 @@ Basic keybindings:
 | Mod + Shift + k | Change window position up    |
 | Mod + Shift + l | Change window position right |
 | Mod + Shift + f | Change layout to floating    |
+| Mod + Shift + r | Active windows               |
+| Mod + r         | Applications menu            |
 | Mod + w         | Kill window                  |
 | Mod + Return    | Terminal                     |
 | Mod + Print     | Screenshot                   |
@@ -99,4 +103,5 @@ Basic keybindings:
 ![cool](coolsetup.png)
 
 Made by crazyc4t with <3
+
 [My website!](https://crazyc4t.xyz)
